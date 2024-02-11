@@ -1,0 +1,611 @@
+
+/* Importación de Google Fonts para el proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Raleway:wght@500;600&display=swap');
+
+/* ================================= estilos banner ================================= */
+
+/* Reinicio de márgenes, rellenos y box-sizing por defecto */
+* {
+/* Estableciendo el margen superior e inferior, y el relleno superior e inferior a 0 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fuente predeterminada para el proyecto */
+    scroll-behavior: smooth;
+}
+
+/* Estilizando párrafos */
+p {
+    font-weight: 300; /* Peso de fuente más ligero */
+    color: #111; /* Color de texto oscuro */
+}
+
+/* body {
+    min-height: 1000px;
+} */
+
+/* Estilizando la sección del banner */
+.banner {
+    position: relative; /* Posicionado relativo a su posición normal */
+    width: 100%; /* Ancho completo */
+    min-height: 100vh; /* Altura mínima de la ventana de visualización */
+    display: flex; /* Diseño flexbox */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    background: url(/img/bg.jpg); /* Imagen de fondo */
+    background-size: cover; /* Cubrir todo el contenedor */
+}
+
+/* Estilizando el contenido dentro del banner */
+.banner .content {
+    max-width: 900px; /* Limitando el ancho máximo del contenido */
+    text-align: center; /* Alineación centrada del contenido */
+}
+
+/* Estilizando el encabezado dentro del banner */
+.banner .content h2 {
+    font-size: 5em; /* Tamaño de fuente grande para énfasis */
+    color: #fff; /* Color de texto blanco */
+}
+
+/* Estilizando párrafos dentro del banner */
+.banner .content p {
+    font-size: 1em; /* Tamaño de fuente normal */
+    color: #fff; /* Color de texto blanco */
+}
+
+/* Estilizando botones */
+.btn {
+    font-size: 1em; /* Tamaño de fuente normal */
+    color: #fff; /* Color de texto blanco */
+    background: #ff0157; /* Color de fondo rosa */
+    display: inline-block; /* Diseño de bloque en línea */
+    padding: 10px 30px; /* Relleno alrededor del texto del botón */
+    margin-top: 20px; /* Espacio encima del botón */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-decoration: none; /* Sin subrayado */
+    letter-spacing: 2px; /* Espaciado entre letras aumentado */
+    transition: 0.5s; /* Transición de medio segundo */
+    box-shadow: 0 20px 15px 0 rgba(0,0,0,0.5);
+}
+
+/* Estilos para el hover del botón */
+.btn:hover {
+    letter-spacing: 6px; /* Espaciado entre letras aumentado */
+    background: #fff; /* Fondo blanco */
+    color: black; /* Texto negro */
+}
+
+/* Estilos para el encabezado */
+/* ================================= estilos header ================================= */
+header {
+    position: fixed; /* Posición fija */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    padding: 40px 100px; /* Relleno superior e inferior de 40px, relleno izquierdo y derecho de 100px */
+    z-index: 10000; /* Índice z alto para que esté por encima de otros elementos */
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    align-items: center; /* Centrar verticalmente */
+    transition: 0.5s; /* Transición de 0.5 segundos */
+}
+
+/* Estilos para el encabezado cuando está pegajoso */
+header.sticky {
+    background: #fff; /* Fondo blanco */
+    padding: 10px 100px; /* Relleno superior e inferior de 10px, relleno izquierdo y derecho de 100px */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Sombra */
+}
+
+/* Estilos para el logotipo en el encabezado */
+header .logo {
+    color: #fff; /* Color del texto */
+    font-weight: 700; /* Peso de la fuente */
+    font-size: 2em; /* Tamaño de fuente de 2em */
+    text-decoration: none; /* Sin decoración de texto */
+}
+
+/* Estilos para el logotipo en el encabezado cuando está pegajoso */
+header.sticky .logo {
+    color: #111; /* Color del texto */
+}
+
+/* Estilos para el span dentro del logotipo en el encabezado */
+header .logo span {
+    color: #ff0157; /* Color del texto */
+}
+
+/* Estilos para la navegación en el encabezado */
+header .navigation {
+    position: relative; /* Posición relativa */
+    display: flex; /* Mostrar como flexbox */
+}
+
+/* Estilos para los elementos de la lista en la navegación del encabezado */
+header .navigation li {
+    list-style: none; /* Sin viñetas */
+    margin-left: 30px; /* Margen izquierdo de 30px */
+}
+
+/* Estilos para los enlaces en la navegación del encabezado */
+header .navigation li a {
+    text-decoration: none; /* Sin decoración de texto */
+    color: #fff; /* Color del texto */
+    font-weight: 300; /* Peso de la fuente */
+}
+
+/* Estilos para los enlaces en la navegación del encabezado cuando está pegajoso */
+header.sticky .navigation li a {
+    color: #111; /* Color del texto */
+}
+
+/* Estilos para los enlaces en la navegación del encabezado al pasar el ratón por encima */
+header .navigation li a:hover {
+    color: #ff0157; /* Color del texto al pasar el ratón por encima */
+}
+
+/* ================================= estilos about ================================= */
+
+/* Estilos para todas las secciones */
+section {
+    padding: 100px; /* Relleno de 100px en todos los lados */
+}
+
+/* Estilos para la clase "row" */
+.row {
+    position: relative; /* Posición relativa */
+    width: 100%; /* Ancho completo */
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+}
+
+/* Estilos para los elementos con clase "col50" dentro de la clase "row" */
+.row .col50 {
+    position: relative; /* Posición relativa */
+    width: 48%; /* Ancho del 48% */
+}
+
+/* Estilos para elementos con clase "titleText" */
+.titleText {
+    color: #111; /* Color del texto */
+    font-size: 2em; /* Tamaño de fuente de 2em */
+    font-weight: 300; /* Peso de la fuente */
+}
+
+/* Estilos para elementos "span" dentro de elementos con clase "titleText" */
+.titleText span {
+    color: #ff0157; /* Color del texto */
+    font-weight: 700; /* Peso de la fuente */
+    font-size: 1.5em; /* Tamaño de fuente de 1.5em */
+}
+
+/* Estilos para elementos con clase "imgBx" dentro de elementos con clase "col50" dentro de la clase "row" */
+.row .col50 .imgBx {
+    position: relative; /* Posición relativa */
+    width: 100%; /* Ancho completo */
+    /* min-height: 300px; */ /* Altura mínima de 300px (comentado) */
+    height: 100%; /* Altura completa */
+}
+
+/* Estilos para las imágenes dentro de elementos con clase "imgBx" dentro de elementos con clase "col50" dentro de la clase "row" */
+.row .col50 .imgBx img {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Escalar la imagen para que cubra el contenedor */
+}
+
+/* ================================= estilos menu ================================= */
+
+/* Estilos para la clase "title" */
+.title {
+    width: 100%; /* Ancho completo */
+    display: flex; /* Mostrar como flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column; /* Apilar elementos verticalmente */
+}
+
+/* Estilos para la clase "content" dentro de la clase "menu" */
+.menu .content {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-direction: row-reverse; /* Invertir el orden de los elementos y alinear horizontalmente */
+    flex-wrap: wrap; /* Envolver elementos en filas adicionales si no caben en una sola fila */
+    margin-top: 40px; /* Margen superior de 40px */
+}
+
+/* Estilos para la clase "box" dentro de la clase "content" dentro de la clase "menu" */
+.menu .content .box {
+    width: 340px; /* Ancho de la caja */
+    margin: 20px; /* Margen exterior */
+    border: 15px solid #fff; /* Borde de 15px sólido con color blanco */
+    box-shadow: 0 25px 35px 5px rgba(0,0,0,0.4); /* Sombra */
+}
+
+/* Estilos para la clase "imgBx" dentro de la clase "box" dentro de la clase "content" dentro de la clase "menu" */
+.menu .content .box .imgBx {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Altura de 300px */
+}
+
+/* Estilos para la etiqueta "img" dentro de la clase "imgBx" dentro de la clase "box" dentro de la clase "content" dentro de la clase "menu" */
+.menu .content .box .imgBx img {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Escalar la imagen para que cubra el contenedor */
+}
+
+/* Estilos para la clase "text" dentro de la clase "box" dentro de la clase "content" dentro de la clase "menu" */
+.menu .content .box .text {
+    padding: 15px 0 5px; /* Relleno */
+}
+
+/* Estilos para el título dentro de la clase "text" dentro de la clase "box" dentro de la clase "content" dentro de la clase "menu" */
+.menu .content .box .text h3 {
+    font-weight: 400; /* Peso de la fuente */
+    color: #111; /* Color del texto */
+}
+
+/* Estilos para la clase "content" dentro de la clase "expert" */
+.expert .content {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Envolver elementos en filas adicionales si no caben en una sola fila */
+    flex-direction: row; /* Alinear elementos en fila */
+    margin-top: 40px; /* Margen superior de 40px */
+}
+
+/* Estilos para la clase "box" dentro de la clase "content" dentro de la clase "expert" */
+.expert .content .box {
+    width: 250px; /* Ancho de la caja */
+    margin: 15px; /* Margen exterior */
+}
+
+/* Estilos para la clase "imgBx" dentro de la clase "box" dentro de la clase "content" dentro de la clase "expert" */
+.expert .content .box .imgBx {
+    position: relative; /* Posicionamiento relativo */
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Altura de 300px */
+}
+
+/* Estilos para la etiqueta "img" dentro de la clase "imgBx" dentro de la clase "box" dentro de la clase "content" dentro de la clase "expert" */
+.expert .content .box .imgBx img {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Escalar la imagen para que cubra el contenedor */
+}
+
+/* Estilos para la clase "text" dentro de la clase "box" dentro de la clase "content" dentro de la clase "expert" */
+.expert .content .box .text {
+    padding: 15px 0 5px; /* Relleno */
+}
+
+/* Estilos para el título dentro de la clase "text" dentro de la clase "box" dentro de la clase "content" dentro de la clase "expert" */
+.expert .content .box .text h3 {
+    font-weight: 400; /* Peso de la fuente */
+    color: #111; /* Color del texto */
+}
+
+/* Estilos para la sección "testimonials" */
+.testimonials {
+    background: url(/img/bg2.jpg); /* Fondo con imagen */
+    background-size: cover; /* Tamaño de la imagen de fondo para que cubra todo el contenedor */
+}
+
+/* Estilos para los elementos con clase "white" que contienen "titleText" y párrafos */
+.white .titleText,
+.white p {
+    color: #fff; /* Color del texto blanco */
+}
+
+/* Estilos para la clase "content" dentro de la sección "testimonials" */
+.testimonials .content {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Envolver elementos en filas adicionales si no caben en una sola fila */
+    flex-direction: row; /* Alinear elementos en fila */
+    margin-top: 40px; /* Margen superior de 40px */
+}
+
+/* Estilos para la clase "box" dentro de la clase "content" dentro de la sección "testimonials" */
+.testimonials .content .box {
+    width: 340px; /* Ancho de la caja */
+    margin: 20px; /* Margen exterior */
+    padding: 40px; /* Relleno */
+    background: #fff; /* Fondo blanco */
+    display: flex; /* Mostrar como flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column; /* Alinear elementos en columna */
+}
+
+/* Estilos para la clase "imgBx" dentro de la clase "box" dentro de la clase "content" dentro de la sección "testimonials" */
+.testimonials .content .box .imgBx
+
+ {
+    position: relative; /* Posicionamiento relativo */
+    width: 80px; /* Ancho de 80px */
+    height: 80px; /* Altura de 80px */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    border-radius: 50%; /* Borde circular */
+    overflow: hidden; /* Ocultar contenido que sobresale */
+    box-shadow: 0 15px 25px 5px rgba(0,0,0,0.4); /* Sombra */
+}
+
+/* Estilos para la etiqueta "img" dentro de la clase "imgBx" dentro de la clase "box" dentro de la clase "content" dentro de la sección "testimonials" */
+.testimonials .content .box .imgBx img {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Escalar la imagen para que cubra el contenedor */
+    box-shadow: 0 15px 5px 0 rgba(0,0,0,0.4); /* Sombra */
+}
+
+/* Estilos para la clase "text" dentro de la clase "box" dentro de la clase "content" dentro de la sección "testimonials" */
+.testimonials .content .box .text {
+    text-align: center; /* Alinear texto al centro */
+}
+
+/* Estilos para los párrafos dentro de la clase "text" dentro de la clase "box" dentro de la clase "content" dentro de la sección "testimonials" */
+.testimonials .content .box .text p {
+    color: #666; /* Color del texto gris */
+    font-style: italic; /* Estilo de fuente cursiva */
+}
+
+/* Estilos para el título dentro de la clase "text" dentro de la clase "box" dentro de la clase "content" dentro de la sección "testimonials" */
+.testimonials .content .box .text h3 {
+    margin-top: 20px; /* Margen superior de 20px */
+    font-size: 1em; /* Tamaño de fuente */
+    color: #ff0157; /* Color del texto */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+/* ================================= estilos contact ================================= */
+
+/* Estilos para la sección de contacto */
+.contact {
+    background: url(/img/bg3.jpg); /* Fondo con imagen */
+    background-size: cover; /* Tamaño de la imagen de fondo para cubrir */
+}
+
+/* Estilos para el formulario de contacto */
+.contactForm {
+    padding: 75px 50px; /* Relleno superior e inferior de 75px, relleno izquierdo y derecho de 50px */
+    background: #fff; /* Fondo blanco */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.8); /* Sombra */
+    max-width: 500px; /* Ancho máximo de 500px */
+    margin-top: 50px; /* Margen superior de 50px */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el título del formulario de contacto */
+.contactForm h3 {
+    color: #111; /* Color del texto */
+    font-size: 1.2em; /* Tamaño de fuente de 1.2em */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    font-weight: 500; /* Peso de la fuente */
+}
+
+/* Estilos para los elementos de entrada en el formulario de contacto */
+.contactForm .inputBox {
+    position: relative; /* Posición relativa */
+    width: 100%; /* Ancho completo */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%; /* Ancho completo */
+    border: 1px solid #555; /* Borde de 1px sólido */
+    padding: 10px; /* Relleno de 10px */
+    color: #111; /* Color del texto */
+    outline: none; /* Sin contorno */
+    font-size: 16px; /* Tamaño de fuente de 16px */
+    font-weight: 300; /* Peso de la fuente */
+    resize: none; /* No redimensionable */
+}
+
+/* Estilos para el botón de envío en el formulario de contacto */
+.contactForm .inputBox input[type="submit"] {
+    font-size: 1em; /* Tamaño de fuente de 1em */
+    color: #fff; /* Color del texto */
+    background: #ff0157; /* Fondo rosa */
+    display: inline-block; /* Mostrar como bloque en línea */
+    text-transform: uppercase; /* Transformar texto a mayúsculas */
+    text-decoration: none; /* Sin decoración de texto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    transition: 0.5s; /* Transición de 0.5 segundos */
+    max-width: 100px; /* Ancho máximo de 100px */
+    font-weight: 500; /* Peso de la fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor apuntador */
+}
+
+/* Estilos para el texto de derechos de autor */
+/* ================================= copyright ================================= */
+.copyrightText {
+    padding: 8px 40px; /* Relleno superior e inferior de 8px, relleno izquierdo y derecho de 40px */
+    border-top: 1px solid rgba(0,0,0,0.1); /* Borde superior de 1px sólido */
+    text-align: center; /* Alinear texto al centro */
+}
+
+/* Estilos para los párrafos dentro del texto de derechos de autor */
+.copyrightText p {
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para los enlaces dentro del texto de derechos de autor */
+.copyrighText a {
+    color: #ff0157; /* Color del texto rosa */
+    font-weight: 500; /* Peso de la fuente */
+    text-decoration: none; /* Sin decoración de texto */
+}
+
+/* Estilos para la versión responsive */
+/* ================================= Responsive ================================= */
+@media (max-width: 991px){
+    /* Estilos para el encabezado en la versión responsive */
+    header,
+    header.sticky {
+        padding: 10px 20px; /* Relleno superior e inferior de 10px, relleno izquierdo y derecho de 20px */
+    }
+
+    /* Ocultar la navegación en el encabezado en la versión responsive */
+    header .navigation {
+        display: none;
+    }
+
+    /* Estilos para la navegación activa en la versión responsive */
+    header .navigation.active {
+        width: 100%; /* Ancho completo */
+        height: calc(100% -68px); /* Altura calculada */
+        position: fixed; /* Posición fija */
+        top: 68px; /* Alinear en la parte superior */
+        left: 0; /* Alinear a la izquierda */
+        display: flex; /* Mostrar como flexbox */
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+        flex-direction: column; /* Dirección de flexión de columna */
+        background: #fff; /* Fondo blanco */
+    }
+
+    /* Estilos para los elementos de lista de navegación en la versión responsive */
+    header .navigation li {
+        margin-left: 0; /* Sin margen izquierdo */
+    }
+
+    /* Estilos para los enlaces de lista de navegación en la versión responsive */
+    header .navigation li a {
+        color: #111; /* Color del texto */
+        font-size: 1.6em; /* Tamaño de fuente de 1.6em */        
+    }
+
+    /* Estilos para el botón de menú en la versión responsive */
+    .menuToggle {
+        position: relative; /* Posición relativa */
+        width: 40px; /* Ancho de 40px */
+        height: 40px; /* Altura de 40px */
+        background: url(/img/menu\ \(1\).png); /* Fondo con imagen */
+        background-size: 30px; /* Tamaño de imagen de fondo */
+        background-repeat: no-repeat; /* No repetir imagen de fondo */
+        background-position: center; /* Posición de imagen de fondo */
+        cursor: pointer; /* Cursor apuntador */
+    }
+
+    /* Estilos para el botón de menú activo en la versión responsive */
+    .menuToggle.active {
+        background: url(/img/close.png); /* Fondo con imagen de cierre */
+        background-size: 25px; /* Tamaño de imagen de fondo */
+        background-repeat: no-repeat; /* No repetir imagen de fondo */
+        background-position: center; /* Posición de imagen de fondo */
+        cursor: pointer; /* Cursor apuntador */
+    }
+
+    /* Estilos para el botón de menú pegajoso en la versión responsive */
+    header.sticky .menuToggle {
+        filter: invert(1); /* Invertir el color */
+    }
+
+    /* Estilos para las secciones en la versión responsive */
+    section {
+        padding: 20px; /* Relleno
+
+ de 20px */
+    }
+
+    /* Estilos para el título del banner en la versión responsive */
+    .banner .content h2 {
+        font-size: 3em; /* Tamaño de fuente de 3em */
+        color: #fff; /* Color del texto */
+    }
+
+    /* Estilos para la fila en la versión responsive */
+    .row {        
+        flex-direction: column; /* Dirección de flexión de columna */
+    }
+
+    /* Estilos para las columnas en la versión responsive */
+    .row .col50 {
+        position: relative; /* Posición relativa */
+        width: 100%; /* Ancho completo */
+    }
+
+    /* Estilos para las imágenes dentro de las columnas en la versión responsive */
+    .row .col50 .imgBx {
+        height: 300px; /* Altura de 300px */
+        margin-top: 20px; /* Margen superior de 20px */
+    }
+
+    /* Estilos para el contenido del menú en la versión responsive */
+    .menu .content {        
+        margin-top: 20px; /* Margen superior de 20px */
+    }
+
+    /* Estilos para las cajas de contenido del menú en la versión responsive */
+    .menu .content .box {
+        margin: 10px; /* Margen de 10px */
+    }
+
+    /* Estilos para las imágenes dentro de las cajas de contenido del menú en la versión responsive */
+    .menu .content .box .imgBx {
+        height: 260px; /* Altura de 260px */
+    }
+
+    /* Estilos para el título en la versión responsive */
+    .title {
+        text-align: center; /* Alinear texto al centro */
+    }
+
+    /* Estilos para el texto del título en la versión responsive */
+    .titleText {
+        font-size: 1.8em; /* Tamaño de fuente de 1.8em */
+        line-height: 1.5em; /* Altura de línea de 1.5em */
+        margin-bottom: 15px; /* Margen inferior de 15px */
+        font-weight: 300; /* Peso de la fuente */
+    }
+
+    /* Estilos para las cajas de contenido de testimonios en la versión responsive */
+    .testimonials .content .box {        
+        margin: 10px; /* Margen de 10px */
+        padding: 20px; /* Relleno de 20px */
+    }
+
+    /* Estilos para el formulario de contacto en la versión responsive */
+    .contactForm {
+        padding: 35px 40px; /* Relleno superior e inferior de 35px, relleno izquierdo y derecho de 40px */
+        margin-top: 20px; /* Margen superior de 20px */
+        margin-bottom: 30px; /* Margen inferior de 30px */
+    }
+}
+
+@media (max-width: 480px){
+    /* Estilos para el título del banner en la versión responsive */
+    .banner .content h2 {
+        font-size: 2.2em; /* Tamaño de fuente de 2.2em */
+        color: #fff; /* Color del texto */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

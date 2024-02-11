@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="description" content="website for restaurant">
+    <meta name="keywords" content="html,css,javascript">
+    <meta name="author" content="Miller Gutierrez">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <!-- titulo -->
+    <title>Website Restaurant</title>
+</head>
+<body>
+    <!-- ========================== header ============================= -->
+    <header> <!-- Sección de encabezado -->
+        <a href="#" class="logo">Food<span>.</span></a> <!-- Enlace del logo de la página -->
+        <div class="menuToggle" onclick="toggleMenu();"></div> <!-- Botón para alternar el menú -->
+        <ul class="navigation"> <!-- Lista de navegación -->
+            <li><a href="#banner" onclick="toggleMenu();">Home</a></li> <!-- Enlace a la sección de inicio -->
+            <li><a href="#about" onclick="toggleMenu();">About</a></li> <!-- Enlace a la sección "Acerca de" -->
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li> <!-- Enlace a la sección de menú -->
+            <li><a href="#expert" onclick="toggleMenu();">Expert</a></li> <!-- Enlace a la sección de expertos -->
+            <li><a href="#testimonials" onclick="toggleMenu();">Testimonials</a></li> <!-- Enlace a la sección de testimonios -->
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li> <!-- Enlace a la sección de contacto -->
+        </ul>
+    </header>
+
+    <!-- ========================== section banner ============================= -->
+    <section class="banner" id="banner"> <!-- Sección de banner con identificador "banner" -->
+        <div class="content"> <!-- Contenido del banner -->
+            <h2>Always Choose Good</h2> <!-- Encabezado del banner -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, illum eius? 
+                Suscipit inventore consectetur provident quibusdam tempora cumque maxime rerum assumenda 
+                consequatur eligendi eius quas commodi consequuntur ab quae similique praesentium eum, 
+                qui unde. Eius rerum voluptas delectus temporibus expedita.
+            </p> <!-- Texto del banner -->
+            <a class="btn" href="#">Our Menu</a> <!-- Botón para acceder al menú -->
+        </div>
+    </section>
+
+    <!-- ========================== section banner ============================= -->
+    <section class="about" id="about"> <!-- Sección "About" con identificador "about" -->
+        <div class="row"> <!-- Fila para organizar contenido -->
+            <div class="col50"> <!-- Columna que ocupa el 50% del ancho -->
+                <h2 class="titleText"><span>A</span>bout Us</h2> <!-- Encabezado "About Us" -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sequi 
+                    suscipit excepturi odio dicta quasi eveniet magni ipsa! Delectus eos 
+                    quibusdam architecto ad libero in, inventore consequuntur sunt, eligendi 
+                    ipsam blanditiis eveniet laboriosam a deserunt quia molestiae hic doloremque
+                    vero officia perspiciatis eius officiis porro. Nostrum nemo quaerat 
+                    perspiciatis aliquam?<br><br>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Mollitia veritatis iste pariatur vero molestias animi 
+                    doloribus nam perspiciatis expedita aut eaque voluptates, dolores iusto 
+                    facilis officiis saepe sequi vel in architecto, ratione perferendis 
+                    corporis itaque quo sunt. Culpa molestias iusto hic dolorem cupiditate, 
+                    ut accusantium assumenda ab veritatis reprehenderit adipisci.
+                </p> <!-- Texto descriptivo sobre la empresa -->
+            </div> <!-- Fin de la columna -->
+            <div class="col50"> <!-- Columna que ocupa el 50% del ancho -->
+                <div class="imgBx"> <!-- Contenedor de imagen -->
+                    <img src="/img/img1.jpg" alt=""> <!-- Imagen -->
+                </div>
+            </div> <!-- Fin de la columna -->
+        </div> <!-- Fin de la fila -->
+    </section> <!-- Fin de la sección "About" -->
+    
+    <!-- ========================== section menu ============================= -->
+    <section class="menu" id="menu">
+        <div class="title">
+            <h2 class="titleText">Our <span>M</span>enu</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/menu1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Salads</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/menu2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Soup</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/menu3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Pasta</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/menu4.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Salads</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/menu5.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Soup</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/menu6.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Pasta</h3>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="#" class="btn">View All</a>
+        </div>
+    </section>
+
+    <!-- ========================== section expert ============================= -->
+    <section class="expert" id="expert">
+        <div class="title">
+            <h2 class="titleText">Our Kitchen <span>E</span>xpert</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/expert1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/expert2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/expert3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/expert4.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================== section testimonials ============================= -->
+
+    <section class="testimonials" id="testimonials">
+        <div class="title white">
+            <h2 class="titleText">They <span>S</span>aid About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/testi1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos provident 
+                        qui quis unde asperiores eius ratione fugiat eligendi non repudiandae 
+                        aliquam velit facilis, consequatur ipsam?
+                    </p>
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/testi2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos provident 
+                        qui quis unde asperiores eius ratione fugiat eligendi non repudiandae 
+                        aliquam velit facilis, consequatur ipsam?
+                    </p>
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="/img/testi3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos provident 
+                        qui quis unde asperiores eius ratione fugiat eligendi non repudiandae 
+                        aliquam velit facilis, consequatur ipsam?
+                    </p>
+                    <h3>Someone Famous</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================== section contact ============================= -->
+
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText"><span>C</span>ontact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="contactForm">
+            <h3>Send Message</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Name"> </textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Send">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================== copyright ============================= -->
+    <div class="copyrightText">
+        <p>copyright 2024  <a href=""#>Miller.</a> All right Reserved.</p>
+    </div>
+
+    <!-- ========================== javascript ============================= -->
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    
+    /*-- ========================== toggle ============================= */
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
